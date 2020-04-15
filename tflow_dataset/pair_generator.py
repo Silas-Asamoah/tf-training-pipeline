@@ -7,10 +7,10 @@ class PairGenerator(object):
     person2 = 'person2'
     label = 'same_person'
     
-    def __init__(self, lfw_path='tf_dataset/resource' + os.path.sep + 'lfw'):
+    def __init__(self, lfw_path=r'C:\Users\c819934\MachineLearning\Tensorflow Training Pipeline\tflow_dataset\resources' + os.path.sep + 'lfw'):
         self.all_people = self.generate_all_people_dict(lfw_path)
         
-    def generate_all_people(self, lfw_path):
+    def generate_all_people_dict(self, lfw_path):
         all_people = {}
         for person_folder in os.listdir(lfw_path):
             person_photos = glob.glob(lfw_path + os.path.sep + person_folder + os.path.sep + '*.jpg')
